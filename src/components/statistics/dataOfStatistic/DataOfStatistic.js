@@ -1,9 +1,18 @@
+import s from './DataOfStatistic.module.css';
 import PropTypes from 'prop-types'; 
+
+function getRandomColor() {
+    const r = function () {
+      return Math.floor(Math.random() * 256);
+    };
+    return 'rgb(' + r() + ',' + r() + ',' + r() + ')';
+}
+
 export default function DataOfStatistic ({id, label, percentage}) {
     return (
-            <li key = {id} className="item">
-                <span className="label">{label + " "}</span>
-                <span className="percentage">{percentage}%</span>
+            <li key = {id} className={s.item}  style={{ backgroundColor: getRandomColor(255) }}>
+                <span className={s.label}>{label + " "}</span>
+                <span className={s.percentage} >{percentage}%</span>
             </li>
     );
 }
