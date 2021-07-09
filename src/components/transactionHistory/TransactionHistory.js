@@ -1,8 +1,9 @@
 import s from './TransactionHistory.module.css'
 import Transaction from "./transaction/Transaction";
+import PropTypes from 'prop-types'; 
 
 
-export default function TransactionHistory ({items}) {
+function TransactionHistory ({items}) {
     return (<table className={s.transaction}>
                 <thead>
                     <tr>
@@ -23,3 +24,15 @@ export default function TransactionHistory ({items}) {
                 </tbody>
         </table>);
 };
+
+
+TransactionHistory.propTypes = {
+    items: PropTypes.arrayOf(PropTypes.shape({
+        key: PropTypes.number.isRequired,
+        type: PropTypes.string.isRequired,
+        amount: PropTypes.number.isRequired,
+        currency: PropTypes.string.isRequired,
+    })),
+}
+
+export default TransactionHistory;

@@ -1,6 +1,5 @@
-import PropTypes from 'prop-types'; 
 
-export default function TransactionHistory ({id, type, amount, currency}) {
+function TransactionHistory ({id, type, amount, currency}) {
     return (
         <tr key = {id}>
         <td>{type}</td>
@@ -10,9 +9,4 @@ export default function TransactionHistory ({id, type, amount, currency}) {
     );
 }
 
-TransactionHistory.prototype = {
-    key: PropTypes.number.isRequired,
-    type: PropTypes.string.isRequired,
-    amount: PropTypes.number.isRequired,
-    currency: PropTypes.string.isRequired,
-}
+export default TransactionHistory;

@@ -8,7 +8,7 @@ function getRandomColor() {
     return 'rgb(' + r() + ',' + r() + ',' + r() + ')';
 }
 
-export default function DataOfStatistic ({id, label, percentage}) {
+function DataOfStatistic ({id, label, percentage}) {
     return (
             <li key = {id} className={s.item}  style={{ backgroundColor: getRandomColor(255) }}>
                 <span className={s.label}>{label + " "}</span>
@@ -17,8 +17,4 @@ export default function DataOfStatistic ({id, label, percentage}) {
     );
 }
 
-DataOfStatistic.prototype = {
-    label: PropTypes.string.isRequired,
-    percentage: PropTypes.number.isRequired, 
-    id: PropTypes.number.isRequired,
-  }
+export default DataOfStatistic;

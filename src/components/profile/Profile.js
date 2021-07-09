@@ -1,7 +1,7 @@
 import s from './Profile.module.css'
 import PropTypes from 'prop-types'; 
 
-export default function Profile ({name, tag, location, avatar = "https://image.flaticon.com/icons/png/512/2609/2609282.png", stats}) {
+function Profile ({name, tag, location, avatar = "https://image.flaticon.com/icons/png/512/2609/2609282.png", stats}) {
     return <div className={s.profile}>
     <div>
       <img
@@ -31,10 +31,13 @@ export default function Profile ({name, tag, location, avatar = "https://image.f
   </div>
 }
 
-Profile.prototype = {
+Profile.propTypes = {
   name: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired, 
   location: PropTypes.string.isRequired, 
   avatar: PropTypes.string.isRequired,
   stats: PropTypes.object.isRequired,
 }
+
+
+export default Profile;
