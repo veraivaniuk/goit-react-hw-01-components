@@ -27,4 +27,3 @@ FriendList.propTypes = {
 }
 
 export default FriendList 
- ttt
