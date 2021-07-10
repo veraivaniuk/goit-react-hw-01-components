@@ -1,5 +1,4 @@
 import s from './DataOfStatistic.module.css';
-import PropTypes from 'prop-types'; 
 
 function getRandomColor() {
     const r = function () {
