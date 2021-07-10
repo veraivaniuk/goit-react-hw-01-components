@@ -3,6 +3,7 @@ import DataOfStatistic from "./dataOfStatistic/DataOfStatistic";
 import PropTypes from 'prop-types';
 
 function Statistics ( {title, stats} ) {
+
     return (
          <section> 
              {title && (<h2 className={s.title}>{title}</h2>) }              

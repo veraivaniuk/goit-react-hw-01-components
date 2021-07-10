@@ -2,6 +2,7 @@ import s from './Profile.module.css'
 import PropTypes from 'prop-types'; 
 
 function Profile ({name, tag, location, avatar = "https://image.flaticon.com/icons/png/512/2609/2609282.png", stats}) {
+
     return <div className={s.profile}>
     <div>
       <img
@@ -31,6 +32,7 @@ function Profile ({name, tag, location, avatar = "https://image.flaticon.com/ico
   </div>
 }
 
+
 Profile.propTypes = {
   name: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired, 
@@ -38,6 +40,5 @@ Profile.propTypes = {
   avatar: PropTypes.string.isRequired,
   stats: PropTypes.object.isRequired,
 }
-
 
 export default Profile;

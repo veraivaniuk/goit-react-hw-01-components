@@ -3,6 +3,7 @@ import FriendListItem from "./friendListItem/FriendListItem";
 import PropTypes from 'prop-types'; 
 
 function FriendList ({friends})  {
+
     return (<ul className={s.list}>           
             {friends.map(({id, avatar, name, isOnline}) => 
                     (<FriendListItem 
@@ -26,3 +27,4 @@ FriendList.propTypes = {
 }
 
 export default FriendList 
+ ttt

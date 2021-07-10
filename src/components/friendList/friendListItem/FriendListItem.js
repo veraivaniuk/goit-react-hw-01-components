@@ -10,3 +10,4 @@ function FriendListItem ({ avatar, name, isOnline, id })  {
 }
 
 export default FriendListItem;
+

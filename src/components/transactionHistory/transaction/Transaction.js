@@ -1,5 +1,5 @@
-
 function TransactionHistory ({id, type, amount, currency}) {
+
     return (
         <tr key = {id}>
         <td>{type}</td>
